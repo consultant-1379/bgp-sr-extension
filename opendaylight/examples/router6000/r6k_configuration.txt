@@ -1,0 +1,376 @@
+
+[local]r6k-2#
+[local]r6k-2#sh conf
+[local]r6k-2#sh configuration
+Building configuration...
+
+Current configuration:
+!
+!  Configuration last changed by user 'tif' at Wed Jan 24 04:07:10 2018
+!
+!  Configuration last changed by system user '%LICM%' at Wed Jan 24 04:53:02 2018
+!
+!
+!
+!
+service multiple-contexts
+!
+!
+bridge profile bp1
+!
+qos class-map ein-default-dscp-to-dp ip in
+ ip 1 to qos 0
+ ip 2 to qos 0
+ ip 3 to qos 0
+ ip 4 to qos 0
+ ip 5 to qos 0
+ ip 6 to qos 0
+ ip 7 to qos 0
+ ip 8 to qos 24
+ ip 9 to qos 0
+ ip 10 to qos 8
+ ip 11 to qos 0
+ ip 13 to qos 0
+ ip 15 to qos 0
+ ip 16 to qos 24
+ ip 17 to qos 0
+ ip 18 to qos 16
+ ip 19 to qos 0
+ ip 21 to qos 0
+ ip 23 to qos 0
+ ip 24 to qos 0
+ ip 25 to qos 0
+ ip 26 to qos 24
+ ip 27 to qos 0
+ ip 29 to qos 0
+ ip 30 to qos 0
+ ip 31 to qos 0
+ ip 32 to qos 48
+ ip 33 to qos 0
+ ip 34 to qos 40
+ ip 35 to qos 0
+ ip 36 to qos 44
+ ip 37 to qos 0
+ ip 38 to qos 46
+ ip 39 to qos 0
+ ip 40 to qos 48
+ ip 41 to qos 0
+ ip 42 to qos 0
+ ip 43 to qos 0
+ ip 44 to qos 0
+ ip 45 to qos 0
+ ip 47 to qos 0
+ ip 49 to qos 0
+ ip 50 to qos 0
+ ip 51 to qos 60
+ ip 52 to qos 0
+ ip 53 to qos 0
+ ip 54 to qos 62
+ ip 55 to qos 0
+ ip 56 to qos 0
+ ip 57 to qos 0
+ ip 58 to qos 0
+ ip 59 to qos 0
+ ip 60 to qos 0
+ ip 61 to qos 0
+ ip 62 to qos 0
+ ip 63 to qos 0
+!
+!
+!
+!
+!
+!
+!
+!
+!
+global synchronization option 2
+!
+!
+no release description
+!
+!
+!
+!
+!
+!
+no release description
+!
+!release ID 2
+!
+!
+alarm-port 1 input 1 active low
+alarm-port 1 input 1 admin-state disabled
+alarm-port 1 input 1 severity critical
+no alarm-port 1 input 1 description
+alarm-port 1 input 2 active low
+alarm-port 1 input 2 admin-state disabled
+alarm-port 1 input 2 severity critical
+no alarm-port 1 input 2 description
+alarm-port 1 input 3 active low
+alarm-port 1 input 3 admin-state disabled
+alarm-port 1 input 3 severity critical
+no alarm-port 1 input 3 description
+!
+alarm-port 1 output 1 admin-state disabled
+no alarm-port 1 output 1 description
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+netconf tls server admin-state disabled
+!
+context local
+!
+ no ip domain-lookup
+!
+
+!
+!
+ router-id 2.2.2.2
+!
+ interface 1/13_r6k-2 p2p
+  ip address 192.168.1.2/24
+!
+ interface 1/14_r6k-2
+  ip address 192.168.4.1/24
+!
+ interface lb loopback
+  ip address 2.2.2.2/32
+!
+ interface mgmt
+  ip address 10.4.10.142/26
+!
+!
+ ip route 0.0.0.0/0 10.4.10.129
+!
+!
+!
+ service ssh
+ service scp
+!
+ router isis 1
+  net 49.0001.1111.1111.0002.00
+  is type level-1
+  lsp refresh-interval 30
+  lsp max-lifetime 120
+  traffic-engineering level-1
+  address-family ipv4 unicast
+   segment-routing global-block 999600 through 999699
+   link-state id 1000 level-1
+ !
+  interface 1/14_r6k-2
+   ! bind to ethernet 1/14
+   address-family ipv4 unicast
+    adjacency-sid absolute 990204
+ !
+  interface lb
+   address-family ipv4 unicast
+    prefix-sid index 42 node
+ !
+  interface 1/13_r6k-2
+   ! bind to ethernet 1/13
+   address-family ipv4 unicast
+    prefix-sid index 30
+    adjacency-sid absolute 990203
+!
+ router mpls
+  interface 1/14_r6k-2
+  interface lb
+  interface 1/13_r6k-2
+!
+ router rsvp
+  interface 1/14_r6k-2
+  interface lb
+  interface 1/13_r6k-2
+!
+ router bgp 65000
+  maximum update-delay 30
+  address-family link-state ls
+   ls-id 10.4.10.142
+!
+  neighbor 1.1.1.1 internal
+   update-source lb
+   address-family ipv4 vpn
+   address-family l2vpn evpn
+!
+  neighbor 3.3.3.3 internal
+   update-source lb
+   address-family ipv4 vpn
+   address-family l2vpn evpn
+!
+  neighbor 4.4.4.4 internal
+   update-source lb
+   address-family ipv4 vpn
+   address-family l2vpn evpn
+!
+  neighbor 10.4.10.167 internal
+   address-family ipv4 unicast
+   address-family link-state ls
+!
+!
+!
+!
+ logging console
+!
+ aaa authentication administrator local
+!
+!
+ administrator tif encrypted 2 $1$gAeP/lUl$Le3tVEMxVFiDckwtyYZGU3orOck3Pbpt985wj6e0vwrJpkUpWivqnxpSGFsuzKs0CcrjvVGtwtsieMwlj/tbP/
+  privilege start 15
+  role NetconfPlatformAdministrator
+  role SudoUser
+  role SystemAdministrator
+  role TechSupport
+!
+!
+! IPPM configuration
+!
+ ippm twamp light sender
+  session 4 source 192.168.4.1 port 51111 reflector 192.168.4.2 port 51112 interval 100
+!
+ ippm twamp light reflector
+  session 1 source 192.168.1.2 port 51112 sender 192.168.1.1 port 51111
+!
+!
+context backhaul vpn-rd 2:2
+!
+ no ip domain-lookup
+!
+
+!
+!
+ interface s1-to-bb2
+  ip address 10.4.10.245/30
+!
+!
+!
+!
+!
+ router bgp vpn
+  address-family ipv4 unicast
+   export
+    route-target 2:2
+   import
+    route-target 2:2
+   redistribute connected
+   redistribute static
+!
+!
+!
+!
+ no logging console
+!
+!
+!
+!
+context evpn1 vpn-rd 1:1
+!
+ no ip domain-lookup
+!
+
+!
+!
+!
+!
+!
+!
+ router bgp vpn
+  address-family l2vpn evpn
+   export
+    route-target 1:1
+   import
+    route-target 1:1
+!
+!
+!
+!
+ no logging console
+!
+!
+!
+!
+! ** End Context **
+!
+!
+!
+!
+!
+!
+!
+pcep
+!
+  pce odl
+    ip address 10.4.10.167
+!
+  pcc pcc-1
+    ip address 10.4.10.142
+    pce-peer odl role primary
+!
+!
+card lc-1-10ge-24-100ge-4-port 1
+!
+port ethernet 1/1 10ge
+ no shutdown
+ bind interface s1-to-bb2 backhaul
+!
+port ethernet 1/6 10ge
+ description bbq ethernet 1/6
+ no shutdown
+ storm-control pps
+   unknown-dest rate 238
+ encapsulation dot1q
+ service-instance 1
+  match
+   dot1q 100
+!
+port ethernet 1/13 10ge
+ description bbq ethernet 1/13
+ no shutdown
+ bind interface 1/13_r6k-2 local
+!
+port ethernet 1/14 10ge
+ description bbq ethernet 1/14
+ no shutdown
+ bind interface 1/14_r6k-2 local
+!
+port ethernet 1/15 10ge
+ description bbq ethernet 1/15
+ no shutdown
+!
+port ethernet 1/24
+ no shutdown
+ bind interface mgmt local
+!
+ipv6 path-mtu-discovery discovery-interval 600
+!
+system hostname r6k-2
+!
+tcp path-mtu-discovery
+timeout session idle 99999
+!
+!
+!
+snmp server
+snmp view all internet included
+snmp community public all-contexts view all read-write
+bridge evpn1
+ profile bp1
+ no learning
+ evpn instance context evpn1
+  mac-acl vlan 100 smac a4:a1:c2:dd:80:01 dmac a4:a1:c2:dd:80:03 lsp 1-2-3
+  port 1/6 service-instance 1
+   mac-entry static vlan 100 mac a4:a1:c2:dd:80:02
+!
+!
+licensing
+ fingerprint TU8SA06938
+!
+end
+[local]r6k-2#

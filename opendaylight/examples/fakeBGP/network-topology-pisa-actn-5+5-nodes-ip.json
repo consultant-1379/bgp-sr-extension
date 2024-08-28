@@ -1,0 +1,2515 @@
+{
+    "network-topology": {
+        "topology": [
+            {
+                "topology-id": "example-ipv4-topology",
+                "topology-types": {
+                    "odl-bgp-topology-types:bgp-ipv4-reachability-topology": {}
+                },
+                "server-provided": true
+            },
+            {
+                "topology-id": "pcep-topology",
+                "topology-types": {
+                    "network-topology-pcep:topology-pcep": {}
+                }
+            },
+            {
+                "topology-id": "topology-netconf",
+                "node": [
+                    {
+                        "node-id": "controller-config",
+                        "netconf-node-topology:available-capabilities": {
+                            "available-capability": [
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "urn:ietf:params:netconf:capability:candidate:1.0"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "urn:ietf:params:netconf:capability:exi:1.0"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "urn:ietf:params:netconf:base:1.1"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "urn:ietf:params:netconf:base:1.0"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "urn:ietf:params:netconf:capability:notification:1.0"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:topology:tunnel:programming?revision=2013-09-30)topology-tunnel-programming"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:TBD:params:xml:ns:yang:network:isis-topology?revision=2013-07-12)isis-topology"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:iana-if-type?revision=2014-05-08)iana-if-type"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:aaa?revision=2016-12-14)aaa"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:rsvp?revision=2015-08-20)rsvp"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp-labeled-unicast?revision=2015-05-25)bgp-labeled-unicast"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp-vpn-ipv4?revision=2016-02-10)bgp-vpn-ipv4"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:programming:impl?revision=2015-07-20)odl-programming-impl-cfg"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:TBD:params:xml:ns:yang:network:ted?revision=2013-10-21)ted"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:inmemory-datastore-provider?revision=2014-06-17)opendaylight-inmemory-datastore-provider"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:dom:pingpong?revision=2014-11-07)opendaylight-pingpong-broker"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:core:spi:config-dom-store?revision=2014-06-17)opendaylight-config-dom-datastore"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:pcep:ietf-stateful07-app-config?revision=2016-07-07)pcep-ietf-stateful07-app-config"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-yang-library?revision=2016-06-21)ietf-yang-library"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:yang:aaa:cert?revision=2015-11-26)aaa-cert"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-yang-types?revision=2010-09-24)ietf-yang-types"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:netconf-callhome-server?revision=2016-11-09)odl-netconf-callhome-server"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:netconf:notification:1.0?revision=2008-07-14)notifications"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:pcep:sync:optimizations?revision=2015-07-14)odl-pcep-sync-optimizations"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bmp-monitor?revision=2015-05-12)bmp-monitor"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:pcep:impl?revision=2013-06-27)odl-pcep-impl-cfg"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp-state-config?revision=2016-11-07)bgp-state-config"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:pcep?revision=2013-04-09)odl-pcep-api-cfg"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:pcep:tunnel:provider?revision=2013-11-15)odl-pcep-tunnel-provider-cfg"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:l2:types?revision=2013-08-27)opendaylight-l2-types"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(http://openconfig.net/yang/interfaces?revision=2016-04-12)openconfig-interfaces"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:clustering:prefix-shard-configuration?revision=2017-01-10)prefix-shard-configuration"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:bgp:rib:impl?revision=2016-03-30)odl-bgp-rib-impl-cfg"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:iana?revision=2013-08-16)iana"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:config:cluster-admin-provider?revision=2015-10-13)cluster-admin-provider"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:rfc2385:cfg?revision=2016-03-24)rfc2385"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:TBD:params:xml:ns:yang:network-topology?revision=2013-07-12)network-topology"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:config?revision=2013-04-05)config"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:netconf:northbound:notification?revision=2015-08-06)netconf-northbound-notification"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:config:concurrent-data-broker?revision=2014-11-24)odl-concurrent-data-broker-cfg"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:mdsal:core:general-entity?revision=2015-09-30)odl-general-entity"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:netty?revision=2013-11-19)netty"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:threadpool:impl:scheduled?revision=2013-12-01)threadpool-impl-scheduled"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:pcep:auto:bandwidth?revision=2016-01-09)odl-pcep-auto-bandwidth"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:pcep:stats?revision=2014-10-06)pcep-session-stats"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-restconf?revision=2017-01-26)ietf-restconf"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp-message?revision=2013-09-19)bgp-message"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:core:spi:entity-ownership-service?revision=2015-08-10)opendaylight-entity-ownership-service"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp-evpn?revision=2016-03-21)odl-bgp-evpn"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-network?revision=2015-06-08)ietf-network"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:md:sal:config:impl:cluster-singleton-service?revision=2016-07-18)cluster-singleton-service-impl"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:netty:timer?revision=2013-11-19)netty-timer"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(config:aaa:authn:encrypt:service:config?revision=2016-09-15)aaa-encrypt-service-config"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:rest:connector?revision=2014-07-24)opendaylight-rest-connector"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:bgp:rib:impl:config?revision=2016-06-06)bgp-rib-impl"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:rpc-context?revision=2013-06-17)rpc-context"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:config:netconf:auth?revision=2015-07-15)netconf-auth"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:callhome:device-status?revision=2017-01-12)callhome-status"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp-types?revision=2013-09-19)bgp-types"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(http://openconfig.net/yang/network-instance-types?revision=2015-10-18)openconfig-network-instance-types"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:yang:aaa:cert:mdsal?revision=2016-03-21)aaa-cert-mdsal"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:odl-bgp-topology-types?revision=2016-05-24)odl-bgp-topology-types"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:bgp:linkstate-app-config?revision=2016-06-14)bgp-linkstate-app-config"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:odl:programming:config?revision=2017-03-01)odl-programming-config"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:pcep:message?revision=2013-10-07)pcep-message"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:cluster:admin?revision=2015-10-13)cluster-admin"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:config:netconf?revision=2014-04-08)odl-netconf-cfg"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:threadpool:impl:fixed?revision=2013-12-01)threadpool-impl-fixed"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp-inet?revision=2015-03-05)bgp-inet"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp-vpn-ipv6?revision=2016-03-31)bgp-vpn-ipv6"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-restconf?revision=2013-10-19)ietf-restconf"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:programming?revision=2015-07-20)programming"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring-extension?revision=2013-12-10)ietf-netconf-monitoring-extension"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:topology:tunnel:pcep:programming?revision=2013-10-30)topology-tunnel-pcep-programming"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding:v1:codec?revision=2016-07-14)opendaylight-md-sal-binding-v1-codec"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:network:topology?revision=2014-01-13)odl-network-topology"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:pcep:types?revision=2013-10-05)pcep-types"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:ieee754?revision=2013-08-19)ieee754"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(http://openconfig.net/yang/routing-policy?revision=2015-10-09)openconfig-routing-policy"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:pcep:segment:routing?revision=2015-01-12)odl-pcep-segment-routing"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:yang:extension:yang-ext?revision=2013-07-09)yang-ext"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:bgp:peer:config?revision=2016-06-06)bgp-peer"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(http://openconfig.net/yang/bgp-operational?revision=2015-10-09)openconfig-bgp-operational"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:common?revision=2013-10-28)opendaylight-md-sal-common"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp-epe?revision=2015-06-22)bgp-epe"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-inet-types?revision=2010-09-24)ietf-inet-types"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:threadpool?revision=2013-04-09)threadpool"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:bgp:stats:peer?revision=2016-06-06)bgp-stats-peer"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:shutdown:impl?revision=2013-12-18)shutdown-impl"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:bgp:reachability:ipv6?revision=2013-11-15)odl-bgp-treachability-ipv6-cfg"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:topology?revision=2013-11-15)odl-topology-api-cfg"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp-linkstate?revision=2015-02-10)bgp-linkstate"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(http://openconfig.net/yang/openconfig-types?revision=2015-10-09)openconfig-types"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:netconf:base:1.0?revision=2011-06-01)ietf-netconf"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:topology:tunnel:pcep?revision=2013-08-20)topology-tunnel-pcep"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:dom?revision=2013-10-28)opendaylight-md-sal-dom"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:TBD:params:xml:ns:yang:nt:l3-unicast-igp-topology?revision=2013-10-21)l3-unicast-igp-topology"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:pcep:ietf:stateful?revision=2013-12-22)odl-pcep-ietf-stateful07"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-packet-fields?revision=2016-02-18)ietf-packet-fields"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:netconf-node-inventory?revision=2014-01-08)netconf-node-inventory"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:pmsi-tunnel?revision=2016-08-12)pmsi-tunnel"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp-flowspec?revision=2015-08-07)bgp-flowspec"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:TBD:params:xml:ns:yang:network:isis-topology?revision=2013-10-21)isis-topology"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp-segment-routing-ext?revision=2015-10-14)bgp-segment-routing"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:programming:spi?revision=2013-11-15)odl-programming-spi-cfg"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:netconf-node-topology?revision=2015-01-14)netconf-node-topology"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(http://openconfig.net/yang/bgp-types?revision=2015-10-09)openconfig-bgp-types"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf?revision=2015-08-03)odl-sal-netconf-connector-cfg"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:TBD:params:xml:ns:yang:nt:l3-unicast-igp-topology?revision=2013-07-12)l3-unicast-igp-topology"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:shutdown?revision=2013-12-18)shutdown"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:netconf:north:mapper?revision=2015-01-14)netconf-northbound-mapper"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:pcep:app-config?revision=2016-07-07)pcep-app-config"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:TBD:params:xml:ns:yang:network-topology?revision=2013-10-21)network-topology"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bmp-message?revision=2015-05-12)bmp-message"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:netty:threadgroup?revision=2013-11-07)threadgroup"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?revision=2012-02-06)ietf-netconf-notifications"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:core:general-entity?revision=2015-08-20)general-entity"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-network-topology?revision=2015-06-08)ietf-network-topology"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:topology:programming?revision=2013-11-02)network-topology-programming"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:iana-afn-safi?revision=2013-07-04)iana-afn-safi"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:odl-bgp-topology-config?revision=2016-07-26)odl-bgp-topology-config"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-yang-types?revision=2013-07-15)ietf-yang-types"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:pcep:auto-bandwidth-app-config?revision=2016-07-07)pcep-auto-bandwidth-app-config"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:TBD:params:xml:ns:yang:ospf-topology?revision=2013-10-21)ospf-topology"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:topology:pcep?revision=2013-10-24)network-topology-pcep"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:protocol:framework?revision=2014-03-13)protocol-framework"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:sal:restconf:event:subscription?revision=2014-07-08)sal-remote-augment"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:config:actor-system-provider:service?revision=2015-10-05)actor-system-provider-service"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:TBD:params:xml:ns:yang:network:ted?revision=2013-07-12)ted"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:config:distributed-datastore-provider?revision=2014-06-12)distributed-datastore-provider"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:pcep:topology:provider?revision=2013-11-15)odl-pcep-topology-provider-cfg"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(http://openconfig.net/yang/bgp?revision=2015-10-09)openconfig-bgp"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:netty:eventexecutor?revision=2013-11-12)netty-event-executor"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp:openconfig-extensions?revision=2016-06-14)bgp-openconfig-extensions"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:bgp:path:selection:mode?revision=2016-03-01)odl-bgp-path-selection-mode"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp-peer-rpc?revision=2016-03-22)bgp-peer-rpc"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:sal:restconf:service?revision=2015-07-08)sal-restconf-service"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:remote?revision=2014-01-14)sal-remote"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:bgp:reachability:ipv4?revision=2013-11-15)odl-bgp-treachability-ipv4-cfg"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:topology:pcep:programming?revision=2013-11-06)network-topology-pcep-programming"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:core:spi:operational-dom-store?revision=2014-06-17)opendaylight-operational-dom-datastore"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(http://openconfig.net/yang/bgp-policy?revision=2015-10-09)openconfig-bgp-policy"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:network:concepts?revision=2013-11-25)network-concepts"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(http://openconfig.net/yang/bgp-multiprotocol?revision=2015-10-09)openconfig-bgp-multiprotocol"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:threadpool:impl:flexible?revision=2013-12-01)threadpool-impl-flexible"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-inet-types?revision=2013-07-15)ietf-inet-types"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:topology:tunnel:p2p?revision=2013-08-19)topology-tunnel-p2p"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding?revision=2013-10-28)opendaylight-md-sal-binding"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:inventory?revision=2013-08-19)opendaylight-inventory"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:bgp:rib:cfg?revision=2013-07-01)odl-bgp-rib-cfg"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(http://openconfig.net/yang/network-instance?revision=2015-10-18)openconfig-network-instance"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:topology:tunnel?revision=2013-08-19)topology-tunnel"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:pcep:segment-routing-app-config?revision=2016-07-07)pcep-segment-routing-app-config"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:netmod:notification?revision=2008-07-14)nc-notifications"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:config:netconf:northbound?revision=2015-01-14)netconf-northbound"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp-multiprotocol?revision=2013-09-19)bgp-multiprotocol"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:config:actor-system-provider:impl?revision=2015-10-05)actor-system-provider-impl"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:dom:impl?revision=2013-10-28)opendaylight-sal-dom-broker-impl"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp-rib?revision=2013-09-25)bgp-rib"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-interfaces?revision=2014-05-08)ietf-interfaces"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:clustering:entity-owners?revision=2015-08-04)entity-owners"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:odl-bgp-peer-acceptor-config?revision=2016-10-03)odl-bgp-peer-acceptor-config"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:TBD:params:xml:ns:yang:network:sr-poc-topology?revision=2014-11-12)sr-poc-topology"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:config:legacy-entity-ownership-service-provider?revision=2016-02-26)opendaylight-legacy-entity-ownership-service-provider"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:bgp:topology:provider?revision=2013-11-15)odl-bgp-topology-provider-cfg"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding:impl?revision=2013-10-28)opendaylight-sal-binding-broker-impl"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-yang-library?revision=2016-04-09)ietf-yang-library"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:bgp-vpn?revision=2016-04-13)bgp-vpn"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:pcep:crabbe:initiated?revision=2013-11-26)odl-pcep-ietf-initiated00"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:threadpool:impl?revision=2013-04-05)threadpool-impl"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ospf-topology?revision=2013-07-12)ospf-topology"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:bgp:rib:spi?revision=2013-11-15)odl-bgp-rib-spi-cfg"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(http://openconfig.net/yang/local-routing?revision=2015-10-09)openconfig-local-routing"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:controller:bgp:stats:rib:impl?revision=2016-06-06)bgp-stats-rib-impl"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-restconf-monitoring?revision=2017-01-26)ietf-restconf-monitoring"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:yang:aaa:cert:rpc?revision=2015-12-15)aaa-cert-rpc"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?revision=2010-10-04)ietf-netconf-monitoring"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:opendaylight:params:xml:ns:yang:md:sal:config:spi:cluster-singleton-service?revision=2016-07-18)cluster-singleton-service-spi"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(urn:ietf:params:xml:ns:yang:ietf-access-control-list?revision=2016-02-18)ietf-access-control-list"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(http://openconfig.net/yang/openconfig-ext?revision=2015-10-09)openconfig-extensions"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(subscribe:to:notification?revision=2016-10-28)subscribe-to-notification"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(instance:identifier:patch:module?revision=2015-11-21)instance-identifier-patch-module"
+                                },
+                                {
+                                    "capability-origin": "device-advertised",
+                                    "capability": "(http://openconfig.net/yang/policy-types?revision=2015-10-09)openconfig-policy-types"
+                                }
+                            ]
+                        },
+                        "netconf-node-topology:host": "127.0.0.1",
+                        "netconf-node-topology:unavailable-capabilities": {},
+                        "netconf-node-topology:connection-status": "connected",
+                        "netconf-node-topology:port": 1830
+                    }
+                ]
+            },
+            {
+                "topology-id": "example-ipv6-topology",
+                "topology-types": {
+                    "odl-bgp-topology-types:bgp-ipv6-reachability-topology": {}
+                },
+                "server-provided": true
+            },
+            {
+                "topology-id": "example-linkstate-topology",
+                "topology-types": {
+                    "odl-bgp-topology-types:bgp-linkstate-topology": {}
+                },
+                "link": [
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65001&local-domain=3&local-area=0&local-router=3333.3333.3333&remote-as=65001&remote-domain=3&remote-area=0&remote-router=2222.2222.2222&ipv4-iface=172.16.7.2&ipv4-neigh=172.16.7.1",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=3333.3333.3333",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.7.2"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=2222.2222.2222",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.7.1"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 30,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 30,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 5000,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 33,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65001&local-domain=3&local-area=0&local-router=8888.8888.8888&remote-as=65001&remote-domain=3&remote-area=0&remote-router=1111.1111.1111&ipv4-iface=172.16.2.2&ipv4-neigh=172.16.2.1",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=8888.8888.8888",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.2.2"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=1111.1111.1111",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.2.1"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 14,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 14,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 2300,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 81,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65002&local-domain=3&local-area=0&local-router=1010.1010.1010&remote-as=65002&remote-domain=3&remote-area=0&remote-router=9999.9999.9999&ipv4-iface=172.16.13.1&ipv4-neigh=172.16.13.2",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=1010.1010.1010",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.13.1"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=9999.9999.9999",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.13.2"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 20,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 20,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 1100,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 101,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65001&local-domain=3&local-area=0&local-router=8888.8888.8888&remote-as=65001&remote-domain=3&remote-area=0&remote-router=7777.7777.7777&ipv4-iface=172.16.12.2&ipv4-neigh=172.16.12.1",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=8888.8888.8888",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.12.2"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=7777.7777.7777",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.12.1"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 30,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 30,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 1500,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 83,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65001&local-domain=3&local-area=0&local-router=1111.1111.1111&remote-as=65001&remote-domain=3&remote-area=0&remote-router=8888.8888.8888&ipv4-iface=172.16.2.1&ipv4-neigh=172.16.2.2",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=1111.1111.1111",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.2.1"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=8888.8888.8888",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.2.2"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 14,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 14,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 3000,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 12,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65002&local-domain=3&local-area=0&local-router=9999.9999.9999&remote-as=65002&remote-domain=3&remote-area=0&remote-router=5555.5555.5555&ipv4-iface=172.16.10.1&ipv4-neigh=172.16.10.2",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=9999.9999.9999",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.10.1"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=5555.5555.5555",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.10.2"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 500,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 500,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 300,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 93,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65001&local-domain=3&local-area=0&local-router=2222.2222.2222&remote-as=65001&remote-domain=3&remote-area=0&remote-router=3333.3333.3333&ipv4-iface=172.16.7.1&ipv4-neigh=172.16.7.2",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=2222.2222.2222",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.7.1"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=3333.3333.3333",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.7.2"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 30,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 30,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 5000,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 23,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65001&local-domain=3&local-area=0&local-router=7777.7777.7777&remote-as=65001&remote-domain=3&remote-area=0&remote-router=3333.3333.3333&ipv4-iface=172.16.9.1&ipv4-neigh=172.16.9.2",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=7777.7777.7777",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.9.1"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=3333.3333.3333",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.9.2"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 800,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 800,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 200,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 71,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65002&local-domain=3&local-area=0&local-router=5555.5555.5555&remote-as=65002&remote-domain=3&remote-area=0&remote-router=9999.9999.9999&ipv4-iface=172.16.10.2&ipv4-neigh=172.16.10.1",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=5555.5555.5555",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.10.2"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=9999.9999.9999",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.10.1"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 500,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 500,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 300,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 53,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65002&local-domain=3&local-area=0&local-router=5555.5555.5555&remote-as=65002&remote-domain=3&remote-area=0&remote-router=4444.4444.4444&ipv4-iface=172.16.8.2&ipv4-neigh=172.16.8.1",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=5555.5555.5555",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.8.2"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=4444.4444.4444",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.8.1"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 70,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 70,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 1000,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 51,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65001&local-domain=3&local-area=0&local-router=1111.1111.1111&remote-as=65001&remote-domain=3&remote-area=0&remote-router=2222.2222.2222&ipv4-iface=172.16.1.1&ipv4-neigh=172.16.1.2",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=1111.1111.1111",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.1.1"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=2222.2222.2222",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.1.2"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 5,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 5,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 20000,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 11,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65002&local-domain=3&local-area=0&local-router=4444.4444.4444&remote-as=65002&remote-domain=3&remote-area=0&remote-router=6666.6666.6666&ipv4-iface=172.16.5.1&ipv4-neigh=172.16.5.2",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=4444.4444.4444",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.5.1"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=6666.6666.6666",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.5.2"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 20,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 20,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 1000,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 41,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65001&local-domain=3&local-area=0&local-router=3333.3333.3333&remote-as=65001&remote-domain=3&remote-area=0&remote-router=7777.7777.7777&ipv4-iface=172.16.9.2&ipv4-neigh=172.16.9.1",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=3333.3333.3333",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.9.2"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=7777.7777.7777",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.9.1"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 800,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 800,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 200,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 31,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65002&local-domain=3&local-area=0&local-router=9999.9999.9999&remote-as=65002&remote-domain=3&remote-area=0&remote-router=1010.1010.1010&ipv4-iface=172.16.13.2&ipv4-neigh=172.16.13.1",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=9999.9999.9999",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.13.2"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=1010.1010.1010",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.13.1"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 20,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 20,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 1100,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 92,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65002&local-domain=3&local-area=0&local-router=9999.9999.9999&remote-as=65002&remote-domain=3&remote-area=0&remote-router=6666.6666.6666&ipv4-iface=172.16.6.1&ipv4-neigh=172.16.6.2",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=9999.9999.9999",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.6.1"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=6666.6666.6666",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.6.2"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 11,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 11,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 4000,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 92,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65001&local-domain=3&local-area=0&local-router=2222.2222.2222&remote-as=65001&remote-domain=3&remote-area=0&remote-router=1111.1111.1111&ipv4-iface=172.16.1.2&ipv4-neigh=172.16.1.1",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=2222.2222.2222",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.1.2"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=1111.1111.1111",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.1.1"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 5,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 5,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 20000,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 21,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65002&local-domain=3&local-area=0&local-router=6666.6666.6666&remote-as=65002&remote-domain=3&remote-area=0&remote-router=4444.4444.4444&ipv4-iface=172.16.5.2&ipv4-neigh=172.16.5.1",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=6666.6666.6666",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.5.2"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=4444.4444.4444",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.5.1"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 20,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 20,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 1000,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 61,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65002&local-domain=3&local-area=0&local-router=4444.4444.4444&remote-as=65002&remote-domain=3&remote-area=0&remote-router=5555.5555.5555&ipv4-iface=172.16.8.1&ipv4-neigh=172.16.8.2",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=4444.4444.4444",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.8.1"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=5555.5555.5555",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.8.2"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 70,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 70,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 1000,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 43,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65001&local-domain=3&local-area=0&local-router=7777.7777.7777&remote-as=65001&remote-domain=3&remote-area=0&remote-router=8888.8888.8888&ipv4-iface=172.16.12.1&ipv4-neigh=172.16.12.2",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=7777.7777.7777",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.12.1"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=8888.8888.8888",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.12.2"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 30,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 30,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 1500,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 73,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "link-id": "bgpls://IsisLevel1:0/type=link&local-as=65002&local-domain=3&local-area=0&local-router=6666.6666.6666&remote-as=65002&remote-domain=3&remote-area=0&remote-router=9999.9999.9999&ipv4-iface=172.16.6.2&ipv4-neigh=172.16.6.1",
+                        "source": {
+                            "source-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=6666.6666.6666",
+                            "source-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.6.2"
+                        },
+                        "destination": {
+                            "dest-node": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=9999.9999.9999",
+                            "dest-tp": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.6.1"
+                        },
+                        "l3-unicast-igp-topology:igp-link-attributes": {
+                            "metric": 11,
+                            "isis-topology:isis-link-attributes": {
+                                "ted": {
+                                    "te-default-metric": 11,
+                                    "sr-poc-topology:unidirectional-linkdelay": {
+                                        "delay": 4000,
+                                        "flags": ""
+                                    },
+                                    "sr-poc-topology:adj-sid": {
+                                        "sid": 61,
+                                        "weight": 0
+                                    },
+                                    "max-resv-link-bandwidth": 1250000000,
+                                    "unreserved-bandwidth": [
+                                        {
+                                            "priority": 7,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 6,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 5,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 4,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 3,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 2,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 1,
+                                            "bandwidth": 1250000000
+                                        },
+                                        {
+                                            "priority": 0,
+                                            "bandwidth": 1250000000
+                                        }
+                                    ],
+                                    "color": 0,
+                                    "max-link-bandwidth": 1250000000
+                                }
+                            }
+                        }
+                    }
+                ],
+                "server-provided": true,
+                "node": [
+                    {
+                        "node-id": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=7777.7777.7777",
+                        "termination-point": [
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.9.1",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.9.1"
+                                    ]
+                                }
+                            },
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.12.1",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.12.1"
+                                    ]
+                                }
+                            }
+                        ],
+                        "l3-unicast-igp-topology:igp-node-attributes": {
+                            "prefix": [
+                                {
+                                    "prefix": "10.10.10.7/32",
+                                    "metric": 0,
+                                    "sr-poc-topology:prefix-sid": {
+                                        "algorithm": 0,
+                                        "sid": 75,
+                                        "flags": "n p"
+                                    }
+                                }
+                            ],
+                            "isis-topology:isis-node-attributes": {
+                                "ted": {
+                                    "te-router-id-ipv4": "10.10.10.7"
+                                },
+                                "iso": {
+                                    "iso-system-id": "7777.7777.7777"
+                                }
+                            },
+                            "router-id": [
+                                "10.10.10.7"
+                            ]
+                        }
+                    },
+                    {
+                        "node-id": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=9999.9999.9999",
+                        "termination-point": [
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.13.2",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.13.2"
+                                    ]
+                                }
+                            },
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.10.1",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.10.1"
+                                    ]
+                                }
+                            },
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.6.1",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.6.1"
+                                    ]
+                                }
+                            }
+                        ],
+                        "l3-unicast-igp-topology:igp-node-attributes": {
+                            "prefix": [
+                                {
+                                    "prefix": "10.10.10.9/32",
+                                    "metric": 0,
+                                    "sr-poc-topology:prefix-sid": {
+                                        "algorithm": 0,
+                                        "sid": 95,
+                                        "flags": "n p"
+                                    }
+                                }
+                            ],
+                            "isis-topology:isis-node-attributes": {
+                                "ted": {
+                                    "te-router-id-ipv4": "10.10.10.9"
+                                },
+                                "iso": {
+                                    "iso-system-id": "9999.9999.9999"
+                                }
+                            },
+                            "router-id": [
+                                "10.10.10.9"
+                            ]
+                        }
+                    },
+                    {
+                        "node-id": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=3333.3333.3333",
+                        "termination-point": [
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.9.2",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.9.2"
+                                    ]
+                                }
+                            },
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.7.2",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.7.2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "l3-unicast-igp-topology:igp-node-attributes": {
+                            "prefix": [
+                                {
+                                    "prefix": "10.10.10.3/32",
+                                    "metric": 0,
+                                    "sr-poc-topology:prefix-sid": {
+                                        "algorithm": 0,
+                                        "sid": 35,
+                                        "flags": "n p"
+                                    }
+                                }
+                            ],
+                            "isis-topology:isis-node-attributes": {
+                                "ted": {
+                                    "te-router-id-ipv4": "10.10.10.3"
+                                },
+                                "iso": {
+                                    "iso-system-id": "3333.3333.3333"
+                                }
+                            },
+                            "router-id": [
+                                "10.10.10.3"
+                            ]
+                        }
+                    },
+                    {
+                        "node-id": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=1010.1010.1010",
+                        "termination-point": [
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.13.1",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.13.1"
+                                    ]
+                                }
+                            }
+                        ],
+                        "l3-unicast-igp-topology:igp-node-attributes": {
+                            "prefix": [
+                                {
+                                    "prefix": "10.10.10.10/32",
+                                    "metric": 0,
+                                    "sr-poc-topology:prefix-sid": {
+                                        "algorithm": 0,
+                                        "sid": 105,
+                                        "flags": "n p"
+                                    }
+                                }
+                            ],
+                            "isis-topology:isis-node-attributes": {
+                                "ted": {
+                                    "te-router-id-ipv4": "10.10.10.10"
+                                },
+                                "iso": {
+                                    "iso-system-id": "1010.1010.1010"
+                                }
+                            },
+                            "router-id": [
+                                "10.10.10.10"
+                            ]
+                        }
+                    },
+                    {
+                        "node-id": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=5555.5555.5555",
+                        "termination-point": [
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.10.2",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.10.2"
+                                    ]
+                                }
+                            },
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.8.2",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.8.2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "l3-unicast-igp-topology:igp-node-attributes": {
+                            "prefix": [
+                                {
+                                    "prefix": "10.10.10.5/32",
+                                    "metric": 0,
+                                    "sr-poc-topology:prefix-sid": {
+                                        "algorithm": 0,
+                                        "sid": 55,
+                                        "flags": "n p"
+                                    }
+                                }
+                            ],
+                            "isis-topology:isis-node-attributes": {
+                                "ted": {
+                                    "te-router-id-ipv4": "10.10.10.5"
+                                },
+                                "iso": {
+                                    "iso-system-id": "5555.5555.5555"
+                                }
+                            },
+                            "router-id": [
+                                "10.10.10.5"
+                            ]
+                        }
+                    },
+                    {
+                        "node-id": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=8888.8888.8888",
+                        "termination-point": [
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.2.2",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.2.2"
+                                    ]
+                                }
+                            },
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.12.2",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.12.2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "l3-unicast-igp-topology:igp-node-attributes": {
+                            "prefix": [
+                                {
+                                    "prefix": "10.10.10.8/32",
+                                    "metric": 0,
+                                    "sr-poc-topology:prefix-sid": {
+                                        "algorithm": 0,
+                                        "sid": 85,
+                                        "flags": "n p"
+                                    }
+                                }
+                            ],
+                            "isis-topology:isis-node-attributes": {
+                                "ted": {
+                                    "te-router-id-ipv4": "10.10.10.8"
+                                },
+                                "iso": {
+                                    "iso-system-id": "8888.8888.8888"
+                                }
+                            },
+                            "router-id": [
+                                "10.10.10.8"
+                            ]
+                        }
+                    },
+                    {
+                        "node-id": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=6666.6666.6666",
+                        "termination-point": [
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.5.2",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.5.2"
+                                    ]
+                                }
+                            },
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.6.2",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.6.2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "l3-unicast-igp-topology:igp-node-attributes": {
+                            "prefix": [
+                                {
+                                    "prefix": "10.42.42.6/32",
+                                    "metric": 0,
+                                    "sr-poc-topology:prefix-sid": {
+                                        "algorithm": 0,
+                                        "sid": 65,
+                                        "flags": "n p"
+                                    }
+                                }
+                            ],
+                            "isis-topology:isis-node-attributes": {
+                                "ted": {
+                                    "te-router-id-ipv4": "10.42.42.6"
+                                },
+                                "iso": {
+                                    "iso-system-id": "6666.6666.6666"
+                                }
+                            },
+                            "router-id": [
+                                "10.42.42.6"
+                            ]
+                        }
+                    },
+                    {
+                        "node-id": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=2222.2222.2222",
+                        "termination-point": [
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.7.1",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.7.1"
+                                    ]
+                                }
+                            },
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.1.2",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.1.2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "l3-unicast-igp-topology:igp-node-attributes": {
+                            "prefix": [
+                                {
+                                    "prefix": "10.10.10.2/32",
+                                    "metric": 0,
+                                    "sr-poc-topology:prefix-sid": {
+                                        "algorithm": 0,
+                                        "sid": 25,
+                                        "flags": "n p"
+                                    }
+                                }
+                            ],
+                            "isis-topology:isis-node-attributes": {
+                                "ted": {
+                                    "te-router-id-ipv4": "10.10.10.2"
+                                },
+                                "iso": {
+                                    "iso-system-id": "2222.2222.2222"
+                                }
+                            },
+                            "router-id": [
+                                "10.10.10.2"
+                            ]
+                        }
+                    },
+                    {
+                        "node-id": "bgpls://IsisLevel1:0/type=node&as=65002&domain=3&area=0&router=4444.4444.4444",
+                        "termination-point": [
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.5.1",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.5.1"
+                                    ]
+                                }
+                            },
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.8.1",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.8.1"
+                                    ]
+                                }
+                            }
+                        ],
+                        "l3-unicast-igp-topology:igp-node-attributes": {
+                            "prefix": [
+                                {
+                                    "prefix": "10.10.10.4/32",
+                                    "metric": 0,
+                                    "sr-poc-topology:prefix-sid": {
+                                        "algorithm": 0,
+                                        "sid": 45,
+                                        "flags": "n p"
+                                    }
+                                }
+                            ],
+                            "isis-topology:isis-node-attributes": {
+                                "ted": {
+                                    "te-router-id-ipv4": "10.10.10.4"
+                                },
+                                "iso": {
+                                    "iso-system-id": "4444.4444.4444"
+                                }
+                            },
+                            "router-id": [
+                                "10.10.10.4"
+                            ]
+                        }
+                    },
+                    {
+                        "node-id": "bgpls://IsisLevel1:0/type=node&as=65001&domain=3&area=0&router=1111.1111.1111",
+                        "termination-point": [
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.2.1",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.2.1"
+                                    ]
+                                }
+                            },
+                            {
+                                "tp-id": "bgpls://IsisLevel1:0/type=tp&ipv4=172.16.1.1",
+                                "l3-unicast-igp-topology:igp-termination-point-attributes": {
+                                    "ip-address": [
+                                        "172.16.1.1"
+                                    ]
+                                }
+                            }
+                        ],
+                        "l3-unicast-igp-topology:igp-node-attributes": {
+                            "prefix": [
+                                {
+                                    "prefix": "10.42.42.1/32",
+                                    "metric": 0,
+                                    "sr-poc-topology:prefix-sid": {
+                                        "algorithm": 0,
+                                        "sid": 15,
+                                        "flags": "n p"
+                                    }
+                                }
+                            ],
+                            "isis-topology:isis-node-attributes": {
+                                "ted": {
+                                    "te-router-id-ipv4": "10.42.42.1"
+                                },
+                                "iso": {
+                                    "iso-system-id": "1111.1111.1111"
+                                }
+                            },
+                            "router-id": [
+                                "10.42.42.1"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

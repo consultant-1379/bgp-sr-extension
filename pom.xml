@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+<!--Please Use the latest version of integration pom.xml or the one you want to reference to -->
+	<parent>
+		<groupId>com.ericsson.nms</groupId>
+		<artifactId>integration</artifactId>
+		<version>15.2.0.30</version>
+	</parent>
+
+	<groupId>com.ericsson.oss.services</groupId>
+	<artifactId>bgp-sr-extension</artifactId>
+	<version>1.0.24-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>[${project.artifactId}] JEE6 Project</name>
+
+	<properties>
+	   <ericsson.scm.url>scm:git:[fetch=]ssh://gerritmirror-ha.lmera.ericsson.se:29418/OSS-PROTO/com.ericsson.oss.services/bgp-sr-extension[push=]ssh://gerrit.ericsson.se:29418/OSS-PROTO/com.ericsson.oss.services/bgp-sr-extension</ericsson.scm.url>
+	</properties>
+
+	<!--Profiles for site documentation-->
+
+	 <!--Profile to deploy latest site-->
+	 <profiles>
+	  <profile>
+	     <id>site_latest</id>
+	        <distributionManagement>
+		       <site>
+		         <id>site</id>
+		         <name>Site</name>
+	                 <url>${site.url}/bgp-sr-extension/latest</url>
+		       </site>
+		</distributionManagement>
+	  </profile>
+
+	 <!--Profile to stage site for review-->
+	 
+	   <profile>
+	      <id>site_review</id>
+	         <distributionManagement>
+		        <site>
+			  <id>site</id>
+			  <name>Site</name>
+		          <url>${site.url}</url>
+			</site>	
+                 </distributionManagement>
+           </profile>
+	   </profiles>
+	   <!--Deployment of versioned documentation-->	
+		<distributionManagement>
+		   <site>		
+		     <id>site</id>
+		     <name>Site</name>
+                <url>${site.url}/bgp-sr-extension/${project.version}</url>
+		   </site>
+		  </distributionManagement>
+
+            <modules>
+	       <module>ERICbgpsrextensionpoc_CXP9035201</module>
+    <module>bgp-sr-extension-jar</module>
+  </modules>
+
+  <scm>
+      <developerConnection>${ericsson.scm.url}</developerConnection>
+      <connection>${ericsson.scm.url}</connection>
+      <tag>bgp-sr-extension-1.0.1</tag>
+  </scm>
+
+</project>
+

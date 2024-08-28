@@ -1,0 +1,80 @@
+﻿#		Autonomous System 65001
+#           SSR2                  
+#           |  \
+#           |   \
+#           |   SSR3
+#          /      |
+#     SSR1        |
+#          \      |
+#           |     |
+#           |   SSR7
+#           |   /
+#           |  /
+#           SSR8
+#
+#
+# switches
+# - label: must be unique
+# - sid:  node segment ID - TLV 1158 for loopbackAddress
+# - loopbackAddress: the loopback address - LS MP Reachability + TLV: 1028 + TLV 265
+# - as: the AS number - TLV 512
+# - bgpLsId: the BGP-LS ID - TLV: 513
+# - area: the IGP area - TLV: 514
+# - routerId: ISIS node ID - TLV: 515
+#  refer: 3.2.1.4 of draft-ietf-idr-ls-distribution for 512 513 514 515
+#  refer: 3.2.3 of draft-ietf-idr-ls-distribution for 265 (IP reachability info for the loopbackAddress)
+7  refer: 3.3.1 for 1028 (IPV4 route-ID)
+#
+@nodes nodes
+label  sid   loopbackAddress   as      bgpLsId       area   routerId
+ 01    15     10.42.42.1       65001      3             0    1111:1111:1111
+ 02    25     10.10.10.2       65001      3             0    2222:2222:2222
+ 03    35     10.10.10.3       65001      3             0    3333:3333:3333
+#04    45     10.10.10.4       65002      3             0    4444:4444:4444
+#05    55     10.10.10.5       65002      3             0    5555:5555:5555
+#06    65     10.42.42.6       65002      3             0    6666:6666:6666
+ 07    75     10.10.10.7       65001      3             0    7777:7777:7777
+ 08    85     10.10.10.8       65001      3             0    8888:8888:8888
+#09    95     10.10.10.9       65002      3             0    9999:9999:9999
+#10    105    10.10.10.10      65002      3             0    1010:1010:1010
+#
+# Links (unidirectional)
+# - sid:   adjacency segment ID - not supported now
+# - cost:  metric of link - TLV 1095
+# - bw:    bandwidth - TLV: 1089, TLV: 1090
+# - delay: unidirectional link dela -TLV 1101
+# - saddress: the interface address - TLV 259 + TLV 260 (IPV4 addr and neighbor address)
+# refer to 3.2.2 of draft-ietf-idr-ls-distribution for 259 260
+# refer to 3.3.2 for 1095 1090
+# refer to https://tools.ietf.org/html/draft-ietf-isis-te-metric-extensions-04#section-4.1 for 1101, unit is micro-seconds (1/1000,000 second)
+# refer to for https://tools.ietf.org/html/rfc5305#section-3.4 bw, The units are bytes (not bits!) per second.
+#
+# 100M             =  12500000 (byte per second)
+# 1-Giga-Ethernet  =  125000000 (byte per second)
+# 10-Giga-Ethernet =  1250000000 (byte per second)
+#
+@arcs links
+            sid   cost   bw         delay   saddress
+ 01    02    11      5   1250000000  20000   172.16.1.1
+ 02    01    21      5   1250000000  20000   172.16.1.2
+ 01    08    12     14   1250000000   3000   172.16.2.1
+ 08    01    81     14   1250000000   2300   172.16.2.2
+ 02    03    23     30   1250000000   5000   172.16.7.1
+ 03    02    33     30   1250000000   5000   172.16.7.2
+ 07    03    71    800   1250000000    200   172.16.9.1
+ 03    07    31    800   1250000000    200   172.16.9.2
+ 07    08    73     30   1250000000   1500   172.16.12.1
+ 08    07    83     30   1250000000   1500   172.16.12.2
+
+
+#
+# Users
+# - nodeId: the ID of the previous node, where the prefix belongs to
+# - prefix: the IPv4 prefix - TLV: 265
+# - sid: the sid of the prefix - TLV 1158
+# - cost: prefix cost - TLV 1155
+#
+@nodes prefixes
+label   nodeId   prefix          sid     cost nhop
+
+@arcs empty

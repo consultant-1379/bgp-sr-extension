@@ -1,0 +1,79 @@
+#
+#           Tp11 --- Tp12 --- Tp13 --- Edge 22
+#          /   |        |        |
+#    Edge21    |        |        |
+#          \   |        |        |
+#           Tp14 --- Tp15 --- Tp16 --- Edge 23
+#
+
+#
+# switches
+# - label: must be unique
+# - sid:  node segment ID - TLV 1158 for loopbackAddress
+# - loopbackAddress: the loopback address - LS MP Reachability + TLV: 1028 + TLV 265
+# - as: the AS number - TLV 512
+# - bgpLsId: the BGP-LS ID - TLV: 513
+# - area: the IGP area - TLV: 514
+# - routerId: ISIS node ID - TLV: 515
+#
+@nodes nodes
+label  sid  loopbackAddress   as      bgpLsId     area   routerId
+ 11    101     1.0.0.101      10      3             0    0000:0000:0101
+ 12    102     1.0.0.102      10      3             0    0000:0001:0102
+ 13    103     1.0.0.103      10      3             0    0000:0000:0103
+ 14    104     1.0.0.104      10      3             0    0000:0000:0104
+ 15    105     1.0.0.105      10      3             0    0000:0000:0105
+ 16    106     1.0.0.106      10      3             0    0000:0000:0106
+ 21    201     1.0.0.201      10      3             0    0000:0000:0201
+ 22    202     1.0.0.202      10      3             0    0000:0000:0202
+ 23    203     1.0.0.203      10      3             0    0000:0000:0203
+
+
+#
+# Links (unidirectional)
+# - sid:   adjacency segment ID - not supported now
+# - cost:  metric of link - TLV 1095
+# - bw:    bandwidth - TLV: 1089, TLV: 1090
+# - delay: unidirectional link dela -TLV 1101
+# - saddress: the interface address - TLV 259 + TLV 260
+#
+@arcs links
+            sid   cost   bw  delay   saddress
+ 11    12   912      1   100    10   10.0.0.1
+ 12    11   921      1   100    10   10.0.0.2
+ 11    14   914      1   100    10   10.0.0.3
+ 14    11   941      1   100    10   10.0.0.4
+ 12    13   923      1   100    10   10.0.0.5
+ 13    12   932      1   100    10   10.0.0.6
+ 12    15   925      1   100    10   10.0.0.7
+ 15    12   952      1   100    10   10.0.0.8
+ 13    16   936      1   100    10   10.0.0.9
+ 16    13   963      1   100    10   10.0.0.10
+ 14    15   945      1   100    10   10.0.0.11
+ 15    14   954      1   100    10   10.0.0.12
+ 15    16   956      1   100    10   10.0.0.13
+ 16    15   965      1   100    10   10.0.0.14
+ 21    11     0      1   100    10   10.0.0.15
+ 11    21   811      1   100    10   10.0.0.16
+ 21    14     0      1   100    10   10.0.0.17
+ 14    21   841      1   100    10   10.0.0.18
+ 22    13     0      1   100    10   10.0.0.19
+ 13    22   832      1   100    10   10.0.0.20
+ 23    16     0      1   100    10   10.0.0.21
+ 16    23   863      1   100    10   10.0.0.22
+
+#
+# Users
+# - nodeId: the ID of the previous node, where the prefix belongs to
+# - prefix: the IPv4 prefix - TLV: 265
+# - sid: the sid of the prefix - TLV 1158
+# - cost: prefix cost - TLV 1155
+#
+@nodes prefixes
+label   nodeId   prefix          sid     cost nhop
+ 1      11       11.11.0.0/16    1111    1    1.2.3.4
+ 2      11       11.12.0.0/16    1112    1    1.3.2.1
+ 3		12        1.2.0.0/16     6666    1    0.0.0.0
+ 4      13        1.3.0.0/16     6667    1    0.0.0.0
+
+@arcs empty

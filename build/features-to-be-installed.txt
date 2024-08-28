@@ -1,0 +1,6 @@
+feature:install odl-netconf-connector-all
+feature:install odl-netconf-all
+feature:install odl-netconf-topology
+feature:install odl-restconf-all
+feature:install odl-bgpcep-bgp
+feature:install odl-bgpcep-pcep

@@ -1,0 +1,91 @@
+#
+#           P1_02----P3_04
+#          /            \
+#   PE A_01              PE B_06
+#          \            / 
+#           P2_03-----P4_05
+#
+
+#
+# switches
+# - label: must be unique
+# - sid:  node segment ID - TLV 1158 for loopbackAddress
+# - loopbackAddress: the loopback address - LS MP Reachability + TLV: 1028 + TLV 265
+# - as: the AS number - TLV 512
+# - bgpLsId: the BGP-LS ID - TLV: 513
+# - area: the IGP area - TLV: 514
+# - routerId: ISIS node ID - TLV: 515
+#  refer: 3.2.1.4 of draft-ietf-idr-ls-distribution for 512 513 514 515
+#  refer: 3.2.3 of draft-ietf-idr-ls-distribution for 265 (IP reachability info for the loopbackAddress)
+#  refer: 3.3.1 for 1028 (IPV4 route-ID)
+#
+@nodes nodes
+label  sid  loopbackAddress   as      bgpLsId     area   routerId
+ 12    53     10.0.0.2       65001      3             0    0000:0000:0102
+ 13    54     10.0.0.3       65001      3             0    0000:0000:0103
+ 14    55     10.0.0.4       65001      3             0    0000:0000:0104
+ 15    56     10.0.0.5       65001      3             0    0000:0000:0105
+ 21    50     10.167.237.100   65001      3             0    0000:0000:0201
+ 26    57     10.167.237.101   65001      3             0    0000:0000:0206
+#
+# Links (unidirectional)
+# - sid:   adjacency segment ID - not supported now
+# - cost:  metric of link - TLV 1095
+# - bw:    bandwidth - TLV: 1089, TLV: 1090
+# - delay: unidirectional link dela -TLV 1101
+# - saddress: the interface address - TLV 259 + TLV 260 (IPV4 addr and neighbor address)
+# refer to 3.2.2 of draft-ietf-idr-ls-distribution for 259 260
+# refer to 3.3.2 for 1095 1090
+# refer to https://tools.ietf.org/html/draft-ietf-isis-te-metric-extensions-04#section-4.1 for 1101, unit is micro-seconds (1/1000,000 second)
+# refer to for https://tools.ietf.org/html/rfc5305#section-3.4 bw, The units are bytes (not bits!) per second.
+#
+# 100M             =  12500000 (byte per second)
+# 1-Giga-Ethernet  =  125000000 (byte per second)
+# 10-Giga-Ethernet =  1250000000 (byte per second)
+#
+@arcs links
+            sid   cost   bw    delay   saddress
+ 12    14   924      1   125000000  15000   172.16.3.1
+ 14    12   942      1   125000000  15000   172.16.3.2
+ 14    26   846      1   125000000  10000   172.16.5.1
+ 26    14   0        1   125000000  10000   172.16.5.2
+ 26    15   0        1   12500000   10000   172.16.6.2
+ 15    26   856      1   12500000   10000   172.16.6.1
+ 15    13   953      1   125000000  10000   172.16.4.2
+ 13    15   935      1   125000000  10000   172.16.4.1
+ 13    21   831      1   12500000   5000    172.16.2.2
+ 21    13   0        1   12500000   5000    172.16.2.1
+ 21    12   0        1   125000000  10000   172.16.1.1
+ 12    21   821      1   125000000  10000   172.16.1.2
+
+#
+# Users
+# - nodeId: the ID of the previous node, where the prefix belongs to
+# - prefix: the IPv4 prefix - TLV: 265
+# - sid: the sid of the prefix - TLV 1158
+# - cost: prefix cost - TLV 1155
+#
+@nodes prefixes
+label   nodeId   prefix          sid     cost nhop
+ 1      21       172.16.1.1/30   40        1  172.16.1.1
+ 2      21       172.16.2.1/30   39        1  172.16.2.1
+ 3      21       10.0.0.1/32     51        1  10.0.0.1
+ 4      21       10.1.1.1/32     52        1  10.1.1.1 
+ 5      12       172.16.3.1/30   37        1  172.16.3.1
+ 6      12       172.16.1.2/30   38        1  172.16.1.2
+ 7      13       172.16.4.1/30   35        1  172.16.4.1
+ 8      13       172.16.2.2/30   36        1  172.16.2.2 
+ 9      14       172.16.3.2/30   34        1  172.16.3.2
+ 10     14       172.16.5.1/30   33        1  172.16.5.1 
+ 11     15       172.16.4.2/30   32        1  172.16.4.2
+ 12     15       172.16.6.1/30   31        1  172.16.6.1
+ 13     26       172.16.5.2/30   29        1  172.16.5.2
+ 14     26       172.16.6.2/30   28        1  172.16.6.2
+ 15     26       10.0.0.6/32     58        1  10.0.0.6
+ 16     26       10.1.1.6/32     59        1  10.1.1.6
+ #5      21       172.16.20.1/24    1111    1  172.16.20.1
+# 6      21       172.16.30.1/24    1112    1  172.16.30.1
+#3      26       172.16.21.1/32    2111    1  172.16.21.1
+# 4      26       172.16.31.1/32    2112    1  172.16.31.1
+@arcs empty
+
